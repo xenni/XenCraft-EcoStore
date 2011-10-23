@@ -1,0 +1,5 @@
+# controller is me.xenni.plugins.xencraft.ecosystem.store.bultin.arbiters.UnboundStoreTransactionController
+controllerconfig:
+    markup: 1.10
+    markdown: 1.00
+    logfile: ./plugins/EcoStore/store_unbound.log

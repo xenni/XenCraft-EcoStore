@@ -1,0 +1,38 @@
+name: EcoStore
+version: 1.0.1-alpha
+author: Xenni (xennitalonflame@gmail.com)
+
+main: me.xenni.plugins.xencraft.ecosystem.store.XenCraftEcoStorePlugin
+
+depend: [EcoSystem, XenCraftCore]
+
+permissions:
+    xencraft.eco.store.buy:
+        description: Allows you to buy items from a store.
+        default: true
+    xencraft.eco.store.sell:
+        description: Allows you to sell items to a store.
+        default: true
+    xencraft.eco.store.create:
+        description: Allows you to instantiate a named store from a configuration file and to destroy created stores.
+        default: op
+    
+commands:
+    buy:
+        description: Buys items from a store.
+        permission: xencraft.eco.store.buy
+        usage: "/<command> <Items> (<Payment>)"
+        alias: ["ecobuy", "ecostorebuy"]
+    sell:
+        description: Sells items to a store.
+        permission: xencraft.eco.store.sell
+        usage: "/<command> <Items> (<MoneySystem>)"
+        alias: ["ecosell", "ecostoresell"]
+    price:
+        description: Displays a store's price for the given item.
+        usage: "/<command> (<MoneySystem>) (sell) <Items>"
+        alias: ["ecoprice", "ecostoreprice"]
+    newstore:
+        description: Creates a new store from the sign under the crosshairs.
+        usage: "/<command> <ConfigName>"
+        alias: ["econewstore"]
